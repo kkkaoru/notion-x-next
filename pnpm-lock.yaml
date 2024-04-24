@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@9gustin/react-notion-render':
+        specifier: 3.11.3
+        version: 3.11.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@notionhq/client':
         specifier: 2.2.15
         version: 2.2.15
@@ -52,6 +55,13 @@ importers:
   apps/my-app: {}
 
 packages:
+
+  '@9gustin/react-notion-render@3.11.3':
+    resolution: {integrity: sha512-BNyiHyIPT8lFU8xOLTKxdJbnfzMOBdb7wV+LsZHlCp9wi8cmo/U9gKAv/q4vDwPMw/OQyw3C/qoLDGcfTmPlCw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^18.2.0
+      react-dom: ^18.2.0
 
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -1093,6 +1103,11 @@ packages:
     hasBin: true
 
 snapshots:
+
+  '@9gustin/react-notion-render@3.11.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   '@alloc/quick-lru@5.2.0': {}
 
