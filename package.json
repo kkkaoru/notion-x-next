@@ -9,6 +9,7 @@
   "dependencies": {
     "@9gustin/react-notion-render": "3.11.3",
     "@notionhq/client": "2.2.15",
+    "hono": "4.2.9",
     "html-react-parser": "5.1.10",
     "next": "14.2.2",
     "react": "18.2.0",
@@ -18,11 +19,15 @@
     "@types/node": "20.12.7",
     "@types/react": "18.2.79",
     "@types/react-dom": "18.2.25",
+    "@vitest/coverage-v8": "1.6.0",
     "biome": "0.3.3",
     "postcss": "8.4.38",
     "tailwindcss": "3.4.1",
     "turbo": "1.13.2",
-    "typescript": "5.4.5"
+    "typescript": "5.4.5",
+    "vite": "5.2.11",
+    "vitest": "1.6.0",
+    "wrangler": "3.53.1"
   },
   "packageManager": "pnpm@9.0.5+sha256.61bd66913b52012107ec25a6ee4d6a161021ab99e04f6acee3aa50d0e34b4af9"
 }
