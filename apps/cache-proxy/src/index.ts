@@ -1,14 +1,11 @@
 import { Hono } from 'hono';
-import { poweredBy } from 'hono/powered-by';
-import { logger } from 'hono/logger';
-import { type CorsVars, corsMiddlewareHandler } from './features/cors';
 import { prettyJSON } from 'hono/pretty-json';
+import { middlewares } from './middlewares';
+import type { AppType } from './types';
 
-const app = new Hono<{ Bindings: CorsVars }>();
+const app = new Hono<AppType>();
 
-app.use('*', poweredBy(), logger());
-
-app.use('*', corsMiddlewareHandler);
+app.use('*', ...middlewares);
 
 app.get('/', prettyJSON(), async (c) => {
   return c.json({ message: 'Hello, World!' });
