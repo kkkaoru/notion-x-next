@@ -14,7 +14,7 @@ function parseParams({ request, name }: ParseParamsArgs): string {
 }
 
 async function retrievePageAndBlocks(pageId: string) {
-  const notion = new Client({ auth: process.env.NOTION_API_TOKEN });
+  const notion = new Client({ auth: process.env.NOTION_API_TOKEN, baseUrl: process.env.NOTION_API_BASE_URL });
   const [page, list] = await Promise.all([
     notion.pages.retrieve({ page_id: pageId }),
     notion.blocks.children.list({ block_id: pageId }),

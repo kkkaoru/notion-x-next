@@ -7,7 +7,24 @@ vi.mock('hono/cache', () => ({
   cache: vi.fn().mockImplementation(() => vi.fn()),
 }));
 
-test('should generate cors middleware handler', () => {
+test('should generate default handler', () => {
+  const mockContext = {} as unknown as Context;
+  const mockNext = vi.fn();
+  const mockMiddleware = vi.fn();
+  (cache as Mock).mockImplementation(() => mockMiddleware);
+
+  cacheMiddlewareHandler(mockContext, mockNext);
+
+  expect(cache).toHaveBeenCalledTimes(1);
+  expect(cache).toBeCalledWith({
+    cacheName: 'proxy-cache',
+    cacheControl: 'max-age=3600',
+  });
+  expect(mockMiddleware).toHaveBeenCalledTimes(1);
+  expect(mockMiddleware).toBeCalledWith(mockContext, mockNext);
+});
+
+test('should generate cache middleware handler', () => {
   const mockContext = {
     env: {
       CACHE_CACHE_NAME: 'mock-cache-name',

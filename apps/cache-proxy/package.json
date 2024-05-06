@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "wrangler": "wrangler",
-    "dev": "wrangler dev",
+    "dev": "wrangler dev --port 5000",
     "vitest": "vitest"
   },
   "devDependencies": {
