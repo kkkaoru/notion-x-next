@@ -7,6 +7,6 @@ import { cacheMiddlewareHandler } from '../features/cache';
 export const middlewares: MiddlewareHandler[] = [
   poweredBy(),
   logger(),
-  cacheMiddlewareHandler,
+  // cacheMiddlewareHandler,
   corsMiddlewareHandler,
 ] as const;

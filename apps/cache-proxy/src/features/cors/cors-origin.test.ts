@@ -10,7 +10,7 @@ vi.mock('hono/cors', () => ({
 test('should generate cors middleware handler', () => {
   const mockContext = {
     env: {
-      CORS_ORIGINS: 'https://cloudflare.com,http://localhost:3000',
+      CORS_ORIGINS: 'https://cloudflare.com,http://localhost:3333',
       CORS_MAX_AGE: 999,
       CORS_CREDENTIALS: 'false',
     },
@@ -23,7 +23,7 @@ test('should generate cors middleware handler', () => {
 
   expect(cors).toHaveBeenCalledTimes(1);
   expect(cors).toBeCalledWith({
-    origin: ['https://cloudflare.com', 'http://localhost:3000'],
+    origin: ['https://cloudflare.com', 'http://localhost:3333'],
     allowHeaders: ['Upgrade-Insecure-Requests', 'Content-Type'],
     allowMethods: ['POST', 'GET', 'OPTIONS', 'DELETE'],
     maxAge: 999,
