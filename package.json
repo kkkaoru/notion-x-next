@@ -31,7 +31,7 @@
     "typescript": "5.4.5",
     "vite": "5.2.11",
     "vitest": "1.6.0",
-    "wrangler": "3.53.1"
+    "wrangler": "3.82.0"
   },
   "packageManager": "pnpm@9.0.5+sha256.61bd66913b52012107ec25a6ee4d6a161021ab99e04f6acee3aa50d0e34b4af9"
 }
