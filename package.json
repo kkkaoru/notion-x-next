@@ -11,7 +11,7 @@
     "@mdx-js/react": "3.0.1",
     "@next/mdx": "14.2.3",
     "@notionhq/client": "2.2.15",
-    "hono": "4.2.9",
+    "hono": "4.6.6",
     "html-react-parser": "5.1.10",
     "next": "14.2.2",
     "next-mdx-remote": "4.4.1",
