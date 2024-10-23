@@ -10,6 +10,6 @@
     "vitest": "vitest"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20240502.0"
+    "@cloudflare/workers-types": "4.20241022.0"
   }
 }
